@@ -19,7 +19,7 @@ int main() {
 
         switch(choice){
             case 1:
-
+                arrayMenu();
                 break;
             case 2:
 
@@ -36,4 +36,6 @@ int main() {
                 break;
         }
     }
+    
+    return 0;
 }
