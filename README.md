@@ -4,7 +4,7 @@
 
 ## Group Members
 |       Member     |      Responsibilites         |
--------------------|------------------------------|
+|------------------|------------------------------|
 | Felicia Cruciata | Array/Vector and Queue       |
 | Kodi Tancredi    | Singly Linked List and Stack |
 
@@ -50,7 +50,7 @@
 
 ## File Structure
 |       File       |             Description              |
-|------------------|--------------------------------------|
+|:----------------:|:------------------------------------:|
 |     main.cpp     | Main Menu and Program Navigation     |
 | array.cpp   | Array operations and Menu |
 | array.h   | Array class declaration |
@@ -67,7 +67,7 @@
 ## Complexity
 
 | Structure | Operation | Worst-case Time | Auxiliary Space |
-|:---------:|:---------:|:---------------:|:----------------|
+|:---------:|:---------:|:---------------:|:----------------:|
 | Array | Display | O(n) | O(1) |
 |       |  Search | O(n) | O(1) |
 |       |  Insert | O(n) | O(n) <br> If Reallocation Occurs |
