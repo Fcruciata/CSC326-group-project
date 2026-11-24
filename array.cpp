@@ -52,27 +52,28 @@ void myArray::remove(int index){
 }
 
 void myArray::display(){
-    cout << "Index:" << endl;
+    cout << "Index:  ";
     for (int i = 0; i < arr.size(); i++){
-        cout << "   " << i;
+        cout << "  " << i << "  ";
     }
     cout << endl;
-    cout << "Value:" << endl;
+    cout << "Value:  ";
     for (int i = 0; i < arr.size(); i++){
-        cout << "   " << arr[i];
+        cout << "[" << arr[i] << "] ";
     }
     cout << endl;
 }
 
 void myArray::search(int target){
     display();
+    cout << endl;
     for (int i = 0; i < arr.size(); i++){
-        cout << i << " = " << arr[i] << endl;
+        cout << "Index " << i << " = " << arr[i] << endl;
         if(arr[i] == target){
-            cout << "Target Found" << endl;
+            cout << "Target Found at i = " << i << endl;
             return;
         } else {
-            cout << "Check next index" << endl;
+            cout << "Check Next Index" << endl;
         }
     }
     cout << "Target Not Found" << endl;
@@ -87,7 +88,7 @@ void arrayMenu() {
     //create array
     myArray arr = myArray();
     
-    cout << "You chose Array/Vector. \n Select what you want to see!"<< endl;
+    cout << "\n You chose Array/Vector. Select what you want to see! \n"<< endl;
 
     while (choice != 5){
         cout << "1. Display" << endl;
@@ -97,36 +98,49 @@ void arrayMenu() {
         cout << "5. Return to Main" << endl;
 
         cout << "Enter your Choice (1-5): ";
-        cin >> choice;
+
+        if (!(cin >> choice)){
+            cin.clear();
+            cin.ignore(1000, '\n');
+            cout << "Invalid input. Please enter a number." << endl;
+            continue;
+        }
 
         switch(choice){
             case 1: //Display
+                cout << endl;
                 arr.display();
+                cout << endl;
                 break;
 
             case 2: //Search
-                cout << "Enter target:";
+                cout << endl;
+                cout << "Enter target: ";
                 cin >> target;
                 arr.search(target);
+                cout << endl;
                 break;
 
             case 3: //Insert
-                cout << "Enter value:";
+                cout << endl;
+                cout << "Enter value: ";
                 cin >> value;
-                cout << "Enter index:";
+                cout << "Enter index: ";
                 cin >> index;
                 arr.insert(index, value);
+                cout << endl;
                 break;
 
             case 4://Remove
-                cout << "Enter index:";
+                cout << endl;
+                cout << "Enter index: ";
                 cin >> index;
                 arr.remove(index);
+                cout << endl;
                 break;
 
             case 5://back to main
                 break;
-
             default:
                 break;
         }

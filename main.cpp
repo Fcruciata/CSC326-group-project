@@ -15,7 +15,12 @@ int main() {
         cout << "5. Exit" << endl;
 
         cout << "Enter your Choice (1-5): ";
-        cin >> choice;
+        if (!(cin >> choice)){
+            cin.clear();
+            cin.ignore(1000, '\n');
+            cout << "Invalid input. Please enter a number." << endl;
+            continue;
+        }
 
         switch(choice){
             case 1:
