@@ -1,3 +1,6 @@
+#ifndef QUEUE_H
+#define QUEUE_H
+
 #include <queue>
 using namespace std;
 
@@ -16,4 +19,6 @@ private:
     queue<int> que;
 };
 
-void QueueMenu();
+void queueMenu();
+
+#endif

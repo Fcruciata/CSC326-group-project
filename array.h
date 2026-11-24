@@ -1,5 +1,7 @@
+#ifndef ARRAY_H
+#define ARRAY_H
+
 #include <vector>
-#include <string>
 using namespace std;
 
 class myArray{
@@ -15,3 +17,5 @@ private:
 };
 
 void arrayMenu();
+
+#endif

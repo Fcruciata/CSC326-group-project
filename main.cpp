@@ -3,6 +3,7 @@
 #include "list.h"
 #include "queue.h"
 #include "stack.h"
+#include "validation.h"
 using namespace std;
 
 int main() {
@@ -15,10 +16,7 @@ int main() {
         cout << "5. Exit" << endl;
 
         cout << "Enter your Choice (1-5): ";
-        if (!(cin >> choice)){
-            cin.clear();
-            cin.ignore(1000, '\n');
-            cout << "Invalid input. Please enter a number." << endl;
+       if(!validate(choice)){
             continue;
         }
 
@@ -33,11 +31,12 @@ int main() {
 
                 break;
             case 4:
-
+                queueMenu();
                 break;
             case 5:
                 break;
             default:
+                cout << "Invalid Selection!" << endl;
                 break;
         }
     }
